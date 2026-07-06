@@ -1,0 +1,6 @@
+@CompassAI_HostAddress = http://localhost:5249
+
+GET {{CompassAI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

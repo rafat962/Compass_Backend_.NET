@@ -1,0 +1,429 @@
+[
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/ApiKey/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/v1/ApiKey/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "isActive",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "AdminUpdateKeyCredits",
+    "RelativePath": "api/v1/ApiKey/admin/update-key-credits/{key}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CompassAI.Controllers.ApiKeyControllers.AdminUpdateKeyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "ConsumeKey",
+    "RelativePath": "api/v1/ApiKey/consume/{key}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "Generate",
+    "RelativePath": "api/v1/ApiKey/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CompassAI.Controllers.ApiKeyControllers.CreateKeyRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "RenewPackage",
+    "RelativePath": "api/v1/ApiKey/renew/{key}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CompassAI.Controllers.ApiKeyControllers.RenewPackageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "GetUserKeys",
+    "RelativePath": "api/v1/ApiKey/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
+    "Method": "Validate",
+    "RelativePath": "api/v1/ApiKey/validate/{key}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/v1/Auth/active",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "otpVerifyDto",
+        "Type": "CompassAI.Models.DTO.VerifyOtpDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "CompassAI.Models.DTO.UserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "GetMyKeys",
+    "RelativePath": "api/v1/Auth/my-keys",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/v1/Auth/resetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDto",
+        "Type": "CompassAI.Models.DTO.resetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/v1/Auth/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "CompassAI.Models.DTO.UserRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "VerifyToken",
+    "RelativePath": "api/v1/Auth/token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CompassAI.Controllers.AuthControllers.AuthController\u002BTokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.AuthControllers.AuthController",
+    "Method": "ResetPasswordConfirm",
+    "RelativePath": "api/v1/Auth/UpdatePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newPasswordDto",
+        "Type": "CompassAI.Models.DTO.NewPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.ContactController",
+    "Method": "ContactOwner",
+    "RelativePath": "api/v1/Contact/send-to-owner",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contactRequest",
+        "Type": "CompassAI.Models.DTO.EmailToOwnerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.PermissionController",
+    "Method": "AssignPermission",
+    "RelativePath": "api/v1/Permission/assign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CompassAI.Controllers.AssignPermissionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.PermissionController",
+    "Method": "GetUserPermissions",
+    "RelativePath": "api/v1/Permission/user-permissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "AcceptPendingEmail",
+    "RelativePath": "api/v1/User/acceptPendingEmail/{userId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "ActivateUser",
+    "RelativePath": "api/v1/User/ActiviteUser/{userId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/v1/User/change-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CompassAI.Models.DTO.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "DeleteImage",
+    "RelativePath": "api/v1/User/deleteImage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/v1/User/getAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "GetPendingUsers",
+    "RelativePath": "api/v1/User/getPendingUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "GetUserLogs",
+    "RelativePath": "api/v1/User/getUserLogs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "RejectUser",
+    "RelativePath": "api/v1/User/rejectUser/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompassAI.Controllers.UserControllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/v1/User/updateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

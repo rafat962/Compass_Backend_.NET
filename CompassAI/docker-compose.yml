@@ -1,0 +1,32 @@
+services:
+  # Database Service
+  geodb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: geo_sql_server
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=RafatKamel168953!
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  geoapi:
+    build: .
+    depends_on:
+      - geodb
+    environment:
+      - ConnectionStrings__GeoPlatformConnectionString=Server=geodb;Database=GeoDatabase;User Id=sa;Password=RafatKamel168953!;TrustServerCertificate=True;
+    volumes:
+      - ./wwwroot:/app/wwwroot
+
+  nginx:
+    image: nginx:latest
+    container_name: geo_nginx_proxy
+    ports:
+      - "127.0.0.1:8081:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - geoapi
+
+volumes:
+  sql_data:

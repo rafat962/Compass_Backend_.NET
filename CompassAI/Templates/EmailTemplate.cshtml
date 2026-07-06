@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activate Account</title>
+</head>
+<body style="background-color: #B8CCE2; font-family: 'Cabin', Arial, sans-serif;">
+    <div style="background-color: #ffffff; padding: 40px; max-width: 600px; margin: 0 auto;">
+        <h2>Hello @Model.FirstName,</h2>
+        <p>Registration completed. To finish signing up, use the OTP below:</p>
+        
+        <h1 style="color: #7747FF; text-align: center;">OTP: @Model.OTP</h1>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="@Model.Url" style="background-color: #FFD500; color: #132F40; padding: 15px 25px; text-decoration: none; border-radius: 50px; font-weight: bold;">
+                ACTIVATE MY ACCOUNT >
+            </a>
+        </div>
+    </div>
+</body>
+</html>
