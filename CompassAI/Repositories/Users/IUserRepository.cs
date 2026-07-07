@@ -12,5 +12,7 @@ namespace CompassAI.Repositories.Users
         Task<List<string>> GetUserLogsAsync(Guid id);
         Task UpdateUserAsync(User user);
         Task<bool> IsEmailTakenAsync(string email, Guid excludeUserId);
+
+        Task<bool> UpdateUserPackage(ApiKey ApiKey);
     }
 }

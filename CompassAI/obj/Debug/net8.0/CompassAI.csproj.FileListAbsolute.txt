@@ -454,3 +454,4 @@ G:\CompassAI\backend.NET\CompassAI\obj\Debug\net8.0\CompassAI.pdb
 G:\CompassAI\backend.NET\CompassAI\obj\Debug\net8.0\CompassAI.genruntimeconfig.cache
 G:\CompassAI\backend.NET\CompassAI\obj\Debug\net8.0\ref\CompassAI.dll
 G:\CompassAI\backend.NET\CompassAI\bin\Debug\net8.0\Templates\ResetPassword.cshtml
+G:\CompassAI\backend.NET\CompassAI\obj\Debug\net8.0\CompassAI.sourcelink.json

@@ -60,13 +60,18 @@
   {
     "ContainingType": "CompassAI.Controllers.ApiKeyControllers.ApiKeyController",
     "Method": "ConsumeKey",
-    "RelativePath": "api/v1/ApiKey/consume/{key}",
+    "RelativePath": "api/v1/ApiKey/consume/{key}/{model}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
         "Type": "System.String",
         "IsRequired": true
       }

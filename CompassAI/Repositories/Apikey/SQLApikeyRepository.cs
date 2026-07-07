@@ -74,15 +74,29 @@ namespace CompassAI.Repositories.Apikey
         }
 
         // Increment the usage counter for the specific key
-        public async Task<bool> RecordUsageAsync(string key)
+        public async Task<bool> RecordUsageAsync(string key,string model)
         {
             var apiKey = await _dbContext.ApiKeys
                 .FirstOrDefaultAsync(x => x.Key == key);
 
-            if (apiKey == null || !apiKey.IsValid)
+            if (apiKey == null || !apiKey.IsValid )
                 return false;
 
-            apiKey.RequestsUsed++;
+
+
+            if (model == "MapTalk")
+            {
+                apiKey.MapTalkLimit++;
+            }
+            else if (model == "SpecReviewer")
+            {
+                apiKey.SpecReviewerLimit++;
+            }
+            else if (model == "DocQuery") { 
+                apiKey.DocQueryLimit++;
+            }
+
+                apiKey.RequestsUsed++;
             await _dbContext.SaveChangesAsync();
             return true;
         }

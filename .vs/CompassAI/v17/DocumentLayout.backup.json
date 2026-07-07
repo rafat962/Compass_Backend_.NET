@@ -3,48 +3,16 @@
   "WorkspaceRootPath": "G:\\CompassAI\\backend.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\apikeycontrollers\\apikeycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\apikeycontrollers\\apikeycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\repositories\\users\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\repositories\\users\\sqluserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\repositories\\apikey\\sqlapikeyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\repositories\\apikey\\sqlapikeyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\usercontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\usercontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\repositories\\users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\repositories\\users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\repositories\\apikey\\iapikeyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\repositories\\apikey\\iapikeyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,140 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\UserControllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Controllers\\UserControllers\\UserController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\UserControllers\\UserController.cs",
-              "RelativeToolTip": "CompassAI\\Controllers\\UserControllers\\UserController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAwwHwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T09:15:40.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SQLUserRepository.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Users\\SQLUserRepository.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Repositories\\Users\\SQLUserRepository.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Users\\SQLUserRepository.cs",
-              "RelativeToolTip": "CompassAI\\Repositories\\Users\\SQLUserRepository.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswDYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T09:13:42.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Users\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Repositories\\Users\\IUserRepository.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Users\\IUserRepository.cs",
-              "RelativeToolTip": "CompassAI\\Repositories\\Users\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T09:01:44.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Program.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Program.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Program.cs",
-              "RelativeToolTip": "CompassAI\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T08:57:06.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SQLApikeyRepository.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Apikey\\SQLApikeyRepository.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Repositories\\Apikey\\SQLApikeyRepository.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Apikey\\SQLApikeyRepository.cs",
-              "RelativeToolTip": "CompassAI\\Repositories\\Apikey\\SQLApikeyRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA9wCgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T19:07:37.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiKeyController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
-              "RelativeToolTip": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T17:49:56.704Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\appsettings.json",
-              "RelativeDocumentMoniker": "CompassAI\\appsettings.json",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\appsettings.json",
-              "RelativeToolTip": "CompassAI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-22T08:58:03.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "CompassAI\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T08:56:15.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "IApikeyRepository.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Apikey\\IApikeyRepository.cs",
               "RelativeDocumentMoniker": "CompassAI\\Repositories\\Apikey\\IApikeyRepository.cs",
               "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Repositories\\Apikey\\IApikeyRepository.cs",
               "RelativeToolTip": "CompassAI\\Repositories\\Apikey\\IApikeyRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T18:08:04.613Z"
+              "WhenOpened": "2026-07-07T10:15:38.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "ApiKeyController.cs",
+              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "RelativeDocumentMoniker": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "RelativeToolTip": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAowIwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T17:49:56.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "APIKEY.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\APIKEY.cs",
               "RelativeDocumentMoniker": "CompassAI\\Models\\Domain\\APIKEY.cs",
               "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\APIKEY.cs",
               "RelativeToolTip": "CompassAI\\Models\\Domain\\APIKEY.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T17:51:35.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
-              "RelativeToolTip": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAMwP0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T07:59:05.356Z"
+              "WhenOpened": "2026-06-20T17:51:35.729Z",
+              "EditorCaption": ""
             }
           ]
         }

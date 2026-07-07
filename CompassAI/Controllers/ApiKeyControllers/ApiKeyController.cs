@@ -2,6 +2,7 @@
 using CompassAI.Models.Domain;
 using CompassAI.Repositories.APIKEY;
 using CompassAI.Repositories.Auth;
+using CompassAI.Repositories.Users;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompassAI.Controllers.ApiKeyControllers
@@ -12,11 +13,13 @@ namespace CompassAI.Controllers.ApiKeyControllers
     {
         private readonly IApikeyRepository _apiKeyRepository;
         private readonly IAuthRepository _authRepository;
+        private readonly IUserRepository _UserRepository;
 
-        public ApiKeyController(IApikeyRepository apiKeyRepository, IAuthRepository authRepository)
+        public ApiKeyController(IApikeyRepository apiKeyRepository, IAuthRepository authRepository,IUserRepository userRepository)
         {
             _apiKeyRepository = apiKeyRepository;
             _authRepository = authRepository;
+            _UserRepository = userRepository;
         }
 
         // Generate a new secure API Key with 1-month default expiry
@@ -93,6 +96,10 @@ namespace CompassAI.Controllers.ApiKeyControllers
             {
                 isValid = apiKey.IsValid,
                 remainingRequests = apiKey.RequestsLimit - apiKey.RequestsUsed,
+                RequestsLimit = apiKey.RequestsLimit,
+                MapTalkLimit = apiKey.MapTalkLimit,
+                SpecReviewerLimit = apiKey.SpecReviewerLimit,
+                DocQueryLimit = apiKey.DocQueryLimit,
                 package = apiKey.PackageType,
                 expiry = apiKey.ExpiresAt
             });
@@ -103,8 +110,13 @@ namespace CompassAI.Controllers.ApiKeyControllers
         public async Task<IActionResult> RenewPackage(string key, [FromBody] RenewPackageDto dto)
         {
             var apiKey = await _apiKeyRepository.GetByKeyStringAsync(key);
+
             if (apiKey == null)
                 return NotFound(new { status = "error", message = "API Key not found." });
+
+            apiKey.MapTalkLimit = 0;
+            apiKey.SpecReviewerLimit = 0;
+            apiKey.DocQueryLimit = 0;
 
 
             int calculatedLimit = dto.NewPackageType.ToLower() switch
@@ -119,7 +131,9 @@ namespace CompassAI.Controllers.ApiKeyControllers
             apiKey.PackageType = dto.NewPackageType;
             apiKey.RequestsLimit = calculatedLimit;
             apiKey.RequestsUsed = 0; 
-            apiKey.ExpiresAt = DateTime.UtcNow.AddMonths(1); 
+            apiKey.ExpiresAt = DateTime.UtcNow.AddMonths(1);
+
+            _UserRepository.UpdateUserPackage(apiKey); // Update user's package info
 
             await _apiKeyRepository.UpdateAsync(apiKey);
             return Ok(apiKey);
@@ -127,8 +141,8 @@ namespace CompassAI.Controllers.ApiKeyControllers
 
 
         // Consume 1 request from the API key quota if valid
-        [HttpPost("consume/{key}")]
-        public async Task<IActionResult> ConsumeKey(string key)
+        [HttpPost("consume/{key}/{model}")]
+        public async Task<IActionResult> ConsumeKey(string key,string model)
         {
             // 1. Fetch the API Key
             var apiKey = await _apiKeyRepository.GetByKeyStringAsync(key);
@@ -149,11 +163,16 @@ namespace CompassAI.Controllers.ApiKeyControllers
             // 4. Check Quota Limit
             if (apiKey.RequestsUsed >= apiKey.RequestsLimit)
             {
-                return BadRequest(new { status = "error", message = "You have exceeded your package requests limit for this month." });
+                return BadRequest(new { status = "error", message = "You have exceeded your package requests limit for this month.",Used=apiKey.RequestsUsed, limit=apiKey.RequestsLimit });
             }
 
             // 5. Deduct quota (Increment consumption by 1)
             apiKey.RequestsUsed += 1;
+            apiKey.MapTalkLimit += model.ToLower() == "maptalk" ? 1 : 0;
+            apiKey.SpecReviewerLimit += model.ToLower() == "specreviewer" ? 1 : 0;
+            apiKey.DocQueryLimit += model.ToLower() == "docquery" ? 1 : 0;
+
+
 
             // 6. Save changes via Repository
             await _apiKeyRepository.UpdateAsync(apiKey);

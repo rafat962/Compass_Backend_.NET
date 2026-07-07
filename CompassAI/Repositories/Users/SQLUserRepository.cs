@@ -59,5 +59,18 @@ namespace CompassAI.Repositories.Users
 
         public async Task<bool> IsEmailTakenAsync(string email, Guid excludeUserId) =>
             await _context.Users.AnyAsync(u => u.Email == email && u.Id != excludeUserId);
+
+        public Task<bool> UpdateUserPackage(ApiKey ApiKey)
+        {
+            User user = _context.Users.FirstOrDefault(u => u.ApiKeys[0] == ApiKey);
+
+            if(user == null)
+            {
+                return Task.FromResult(false);
+            }
+            user.CurrentPlan = ApiKey.PackageType;
+
+            return Task.FromResult(true);
+        }
     }
 }

@@ -26,6 +26,6 @@ namespace CompassAI.Repositories.APIKEY
         Task<bool> HasValidQuotaAsync(string key);
 
         // Increment the usage counter after a successful API request
-        Task<bool> RecordUsageAsync(string key);
+        Task<bool> RecordUsageAsync(string key,string model);
     }
 }

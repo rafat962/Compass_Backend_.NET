@@ -187,7 +187,7 @@
         }
       }
     },
-    "/api/v1/ApiKey/consume/{key}": {
+    "/api/v1/ApiKey/consume/{key}/{model}": {
       "post": {
         "tags": [
           "ApiKey"
@@ -195,6 +195,14 @@
         "parameters": [
           {
             "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "model",
             "in": "path",
             "required": true,
             "schema": {
