@@ -364,5 +364,86 @@ namespace CompassAI.Controllers.AuthControllers
         {
             public string Token { get; set; }
         }
+        [HttpPost("me")]
+        public async Task<IActionResult> GetCurrentUserProfile([FromBody] TokenRequestDto request)
+        {
+            try
+            {
+                // 1. التأكد من وجود التوكن في الطلب
+                if (string.IsNullOrEmpty(request.Token))
+                {
+                    return BadRequest(new { status = "error", message = "Token is required" });
+                }
+
+                // 2. فك التوكن واستخراج الـ Claims
+                var principal = TokenService.GetPrincipalFromToken(request.Token);
+                if (principal == null)
+                {
+                    return BadRequest(new { status = "error", message = "Invalid or expired token" });
+                }
+
+                // 3. استخراج الـ ID من الـ Claims
+                var userId = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                             ?? principal.FindFirst("sub")?.Value
+                             ?? principal.FindFirst("nameid")?.Value;
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return BadRequest(new { status = "error", message = "User ID not found in token claims" });
+                }
+
+                var userGuid = Guid.Parse(userId);
+
+                // 4. جلب بيانات اليوزر طازة من الداتا بيز
+                var user = await AuthRepository.GetUserByIdAsync(userGuid);
+                if (user == null)
+                {
+                    return BadRequest(new { status = "error", message = "User no longer exists" });
+                }
+
+                if (!user.Active)
+                {
+                    return BadRequest(new { status = "error", message = "Your account has been deactivated" });
+                }
+
+                // 5. جلب الـ API Key النشط للمستخدم (زي الـ Login بالظبط عشان يظهر في صفحة النجاح)
+                var userKeys = await _apiKeyRepository.GetByUserIdAsync(user.Id);
+                var activeKey = userKeys.FirstOrDefault(k => k.IsActive);
+
+                // 6. جلب الـ Permissions وتنسيقها بنفس شكل الـ Login
+                var perms = await PermissionRepo.GetUserPermissionsAsync(user.Id);
+                var formattedPerms = perms.Select(p => new
+                {
+                    Resource = p.Resource,
+                    Route = p.Route,
+                    RouteName = p.RouteName,
+                    Actions = p.Actions.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                });
+
+                // 7. الرد بنفس الـ Structure المتطابق مع الـ Login 100%
+                return Ok(new
+                {
+                    status = "success",
+                    message = "Profile fetched successfully",
+                    token = request.Token, // إرجاع نفس التوكن
+                    user = new
+                    {
+                        user.Id,
+                        user.Name,
+                        user.Email,
+                        user.Photo,
+                        user.CurrentPlan,
+                        apiKey = activeKey?.Key // الـ API Key المحدث بعد الدفع
+                    },
+                    perms = formattedPerms
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { status = "error", message = ex.Message });
+            }
+        }
     }
+
+
 }

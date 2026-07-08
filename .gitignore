@@ -1,0 +1,36 @@
+## Visual Studio Build Outputs
+[Bb]in/
+[Oo]bj/
+[Log]/
+
+## Visual Studio Cache and Settings
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Rider & JetBrains IDEs
+.idea/
+*.sln.iml
+
+## VS Code Settings
+.vscode/
+!.vscode/extensions.json
+
+## User Secrets & Sensitive Configuration (Safe for Team Collaboration)
+# This ignores development environment files that might contain actual keys
+appsettings.Development.json
+# Uncomment the line below if you want to completely hide your main configuration from Git
+# appsettings.json
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Frontend Dependencies & Build Outputs (In case of a shared repo)
+node_modules/
+dist/
+build/
+.env
+.env.local

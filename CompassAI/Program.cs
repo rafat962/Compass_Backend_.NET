@@ -8,6 +8,7 @@ using CompassAI.Repositories.Permission;
 using CompassAI.Repositories.Users;
 using CompassAI.Services;
 using CompassAI.Services.Email;
+using CompassAI.Services.Payment;
 using CompassAI.Services.Token;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
@@ -39,15 +40,17 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("CompassAIConnectionString")) 
 );
-
+// ----------------- Reposotiries -----------------
 builder.Services.AddScoped<IAuthRepository, SQLAuthRepository>();
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPermissionRepository, SQLPermissionRepository>();
 builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
 builder.Services.AddScoped<IApikeyRepository, SQLApikeyRepository>();
+// ----------------- Services -----------------
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
-// error handling
+// error handling 
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
     {
