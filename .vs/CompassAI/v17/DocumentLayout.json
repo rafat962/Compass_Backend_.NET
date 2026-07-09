@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "G:\\CompassAI\\backend.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\services\\payment\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\services\\payment\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\compassai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\compassai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\services\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\services\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\services\\payment\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\services\\payment\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\services\\payment\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\services\\payment\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +50,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIKEY.cs",
+              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\APIKEY.cs",
+              "RelativeDocumentMoniker": "CompassAI\\Models\\Domain\\APIKEY.cs",
+              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\APIKEY.cs",
+              "RelativeToolTip": "CompassAI\\Models\\Domain\\APIKEY.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T13:17:39.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CompassAI.csproj",
+              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\CompassAI.csproj",
+              "RelativeDocumentMoniker": "CompassAI\\CompassAI.csproj",
+              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\CompassAI.csproj",
+              "RelativeToolTip": "CompassAI\\CompassAI.csproj",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-09T06:39:10.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Services\\Email\\EmailService.cs",
+              "RelativeDocumentMoniker": "CompassAI\\Services\\Email\\EmailService.cs",
+              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Services\\Email\\EmailService.cs",
+              "RelativeToolTip": "CompassAI\\Services\\Email\\EmailService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:35:57.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
@@ -50,38 +100,36 @@
               "RelativeToolTip": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
               "ViewState": "AgIAAF8BAAAAAAAAAAAgwGwBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T10:59:15.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T10:59:15.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
               "RelativeDocumentMoniker": "CompassAI\\Models\\Domain\\User.cs",
               "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
               "RelativeToolTip": "CompassAI\\Models\\Domain\\User.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-08T10:25:55.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\appsettings.json",
               "RelativeDocumentMoniker": "CompassAI\\appsettings.json",
               "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\appsettings.json",
               "RelativeToolTip": "CompassAI\\appsettings.json",
-              "ViewState": "AgIAABAAAAAAAAAAAAAswBkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswBkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-08T09:44:17.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:44:17.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Program.cs",
               "RelativeDocumentMoniker": "CompassAI\\Program.cs",
@@ -89,12 +137,11 @@
               "RelativeToolTip": "CompassAI\\Program.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAAADQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:33:57.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:33:57.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Services\\Payment\\PaymentService.cs",
               "RelativeDocumentMoniker": "CompassAI\\Services\\Payment\\PaymentService.cs",
@@ -102,12 +149,11 @@
               "RelativeToolTip": "CompassAI\\Services\\Payment\\PaymentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:41:01.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:41:01.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "IPaymentService.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Services\\Payment\\IPaymentService.cs",
               "RelativeDocumentMoniker": "CompassAI\\Services\\Payment\\IPaymentService.cs",
@@ -115,21 +161,19 @@
               "RelativeToolTip": "CompassAI\\Services\\Payment\\IPaymentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:40:52.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:40:52.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
               "RelativeDocumentMoniker": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
               "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
               "RelativeToolTip": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFUAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:39:56.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T09:39:56.986Z"
             }
           ]
         }

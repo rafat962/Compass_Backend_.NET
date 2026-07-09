@@ -57,6 +57,8 @@ namespace CompassAI.Services
         public async Task SendOtpEmailAsync(User user, string url)
         {
             var model = new { FirstName = user.Name, OTP = user.OTP, Url = url };
+
+            // تم التأكد من إزالة أي "/" زائدة هنا ليعمل الـ Engine بشكل صحيح
             string htmlBody = await _engine.CompileRenderAsync("EmailTemplate.cshtml", model);
 
             await SendEmailAsync(user.Email, user.Name, "Activate your account", htmlBody);
@@ -65,6 +67,8 @@ namespace CompassAI.Services
         public async Task SendPasswordResetEmailAsync(User user, string url)
         {
             var model = new { UserName = user.Name, ResetUrl = url };
+
+            // استدعاء مباشر باسم الملف
             string htmlBody = await _engine.CompileRenderAsync("ResetPassword.cshtml", model);
 
             await SendEmailAsync(user.Email, user.Name, "Reset Your Password - GeoPlatform", htmlBody);
@@ -73,6 +77,8 @@ namespace CompassAI.Services
         public async Task SendWelcomeEmail(User user, string loginUrl)
         {
             var model = new { UserName = user.Name, LoginUrl = loginUrl };
+
+            // استدعاء مباشر باسم الملف
             string htmlBody = await _engine.CompileRenderAsync("Welcome.cshtml", model);
 
             await SendEmailAsync(user.Email, user.Name, "Welcome to GeoPlatform - Account Activated!", htmlBody);
@@ -81,7 +87,7 @@ namespace CompassAI.Services
         public async Task SendEmailToOwner(EmailToOwnerDto emailDto)
         {
             // Build a simple HTML body for the owner
-                string htmlBody = $@"
+            string htmlBody = $@"
             <h3>New Message from CompassAI Contact Form</h3>
             <p><strong>From:</strong> {emailDto.Email}</p>
             <p><strong>Subject:</strong> {emailDto.Subject}</p>

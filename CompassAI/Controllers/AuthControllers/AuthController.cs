@@ -222,6 +222,7 @@ namespace CompassAI.Controllers.AuthControllers
                     user.Email,
                     user.Photo,
                     user.CurrentPlan,
+                    user.Role,
                     apiKey = activeKey?.Key // لو ملوش مفتاح هيرجع null
                 },
                 perms = formattedPerms

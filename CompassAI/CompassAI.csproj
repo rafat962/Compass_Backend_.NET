@@ -30,20 +30,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Templates\**\*.cshtml">
+		<Content Update="Templates\**\*.cshtml">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Migrations\" />
 		<Folder Include="wwwroot\users\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Update="Templates\ResetPassword.cshtml">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
 	</ItemGroup>
 
 </Project>
