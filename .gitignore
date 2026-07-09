@@ -2,8 +2,8 @@
 [Bb]in/
 [Oo]bj/
 [Log]/
-**/appsettings.json
-CompassAI/appsettings.json
+# **/appsettings.json
+# CompassAI/appsettings.json
 ## Visual Studio Cache and Settings
 .vs/
 *.user
