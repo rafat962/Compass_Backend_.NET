@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Text.Json;
+using CompassAI.Models;
 using CompassAI.Models.Domain;
-using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace CompassAI.Data
 {
@@ -11,11 +12,14 @@ namespace CompassAI.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserPermission> UserPermissions { get; set; }
         public DbSet<ApiKey> ApiKeys { get; set; }
-
+        public DbSet<ModelFeedback> ModelFeedbacks { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<ModelFeedback>()
+                .Property(f => f.Type)
+                .HasConversion<string>();
             // 1. User - Permissions Relationship
             modelBuilder.Entity<UserPermission>()
                 .HasOne(p => p.User)

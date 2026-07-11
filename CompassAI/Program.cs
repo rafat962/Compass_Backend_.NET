@@ -1,5 +1,6 @@
 using System.Text;
 using CompassAI.Data;
+using CompassAI.Repositories;
 using CompassAI.Repositories.Apikey;
 using CompassAI.Repositories.APIKEY;
 using CompassAI.Repositories.Auth;
@@ -45,6 +46,7 @@ builder.Services.AddScoped<IAuthRepository, SQLAuthRepository>();
 builder.Services.AddScoped<IPermissionRepository, SQLPermissionRepository>();
 builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
 builder.Services.AddScoped<IApikeyRepository, SQLApikeyRepository>();
+builder.Services.AddScoped<IModelFeedbackRepository, ModelFeedbackRepository>();
 // ----------------- Services -----------------
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
