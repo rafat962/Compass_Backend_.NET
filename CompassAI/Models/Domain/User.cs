@@ -16,7 +16,7 @@ namespace CompassAI.Models.Domain
         [MinLength(3)]
         public string PasswordHash { get; set; }
 
-        [NotMapped]
+        [NotMapped] // dont save it in database
         public string ConfirmPassword { get; set; }
 
         public string Role { get; set; } = "user";

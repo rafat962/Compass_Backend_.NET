@@ -32,7 +32,7 @@ namespace CompassAI.Services
         private async Task SendEmailAsync(string toEmail, string toName, string subject, string htmlBody)
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress("Rafat Kamel", "rafatkamel96@gmail.com"));
+            email.From.Add(new MailboxAddress("GeoGenAI-Hub", "rafatkamel96@gmail.com"));
             email.To.Add(new MailboxAddress(toName, toEmail));
             email.Subject = subject;
 
@@ -71,7 +71,7 @@ namespace CompassAI.Services
             // استدعاء مباشر باسم الملف
             string htmlBody = await _engine.CompileRenderAsync("ResetPassword.cshtml", model);
 
-            await SendEmailAsync(user.Email, user.Name, "Reset Your Password - GeoPlatform", htmlBody);
+            await SendEmailAsync(user.Email, user.Name, "Reset Your Password - GeoGenAI-Hub", htmlBody);
         }
 
         public async Task SendWelcomeEmail(User user, string loginUrl)
@@ -81,7 +81,7 @@ namespace CompassAI.Services
             // استدعاء مباشر باسم الملف
             string htmlBody = await _engine.CompileRenderAsync("Welcome.cshtml", model);
 
-            await SendEmailAsync(user.Email, user.Name, "Welcome to GeoPlatform - Account Activated!", htmlBody);
+            await SendEmailAsync(user.Email, user.Name, "Welcome to GeoGenAI-Hub - Account Activated!", htmlBody);
         }
 
         public async Task SendEmailToOwner(EmailToOwnerDto emailDto)
@@ -96,7 +96,7 @@ namespace CompassAI.Services
             <p>{emailDto.Message}</p>";
 
             // We send it to your business/owner email
-            await SendEmailAsync("rafatkamel96@gmail.com", "CompassAI Owner", $"Support: {emailDto.Subject}", htmlBody);
+            await SendEmailAsync("rafatkamel96@gmail.com", "GeoGenAI-Hub Owner", $"Support: {emailDto.Subject}", htmlBody);
         }
     }
 }
