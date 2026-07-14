@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\CompassAI\\backend.NET\\",
+  "WorkspaceRootPath": "G:\\Compass-Backend\\backend.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\payment\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\modelfeedbackcontrollers\\modelfeedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\controllers\\modelfeedbackcontrollers\\modelfeedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\modelfeedbackcontrollers\\modelfeedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\authcontrollers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\controllers\\apikeycontrollers\\apikeycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\controllers\\apikeycontrollers\\apikeycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\controllers\\apikeycontrollers\\apikeycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compassai\\backend.net\\compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|g:\\compass-backend\\backend.net\\compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B03E6368-3E3A-4774-87E5-91A4EB74CD1C}|CompassAI\\CompassAI.csproj|solutionrelative:compassai\\models\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,23 +39,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
-              "RelativeDocumentMoniker": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
-              "RelativeToolTip": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCQAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T18:48:49.969Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\appsettings.json",
+              "RelativeDocumentMoniker": "CompassAI\\appsettings.json",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\appsettings.json",
+              "RelativeToolTip": "CompassAI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-11T13:27:23.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
+              "RelativeDocumentMoniker": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\Payment\\PaymentController.cs",
+              "RelativeToolTip": "CompassAI\\Controllers\\Payment\\PaymentController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCQAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T18:48:49.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
               "RelativeDocumentMoniker": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
               "RelativeToolTip": "CompassAI\\Controllers\\AuthControllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -59,11 +75,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApiKeyController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
               "RelativeDocumentMoniker": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
               "RelativeToolTip": "CompassAI\\Controllers\\ApiKeyControllers\\ApiKeyController.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAIwDwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,11 +87,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
               "RelativeDocumentMoniker": "CompassAI\\Models\\Domain\\User.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Models\\Domain\\User.cs",
               "RelativeToolTip": "CompassAI\\Models\\Domain\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,11 +99,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModelFeedbackController.cs",
-              "DocumentMoniker": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
+              "DocumentMoniker": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
               "RelativeDocumentMoniker": "CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
-              "ToolTip": "G:\\CompassAI\\backend.NET\\CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
+              "ToolTip": "G:\\Compass-Backend\\backend.NET\\CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
               "RelativeToolTip": "CompassAI\\Controllers\\ModelFeedbackControllers\\ModelFeedbackController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
