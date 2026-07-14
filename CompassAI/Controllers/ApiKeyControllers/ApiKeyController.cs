@@ -100,6 +100,8 @@ namespace CompassAI.Controllers.ApiKeyControllers
                 MapTalkLimit = apiKey.MapTalkLimit,
                 SpecReviewerLimit = apiKey.SpecReviewerLimit,
                 DocQueryLimit = apiKey.DocQueryLimit,
+                ArcProMCP = apiKey.ArcProMCP,
+                QGISMCP = apiKey.QGISMCP,
                 package = apiKey.PackageType,
                 expiry = apiKey.ExpiresAt
             });
@@ -177,8 +179,8 @@ namespace CompassAI.Controllers.ApiKeyControllers
             else 
             {
                 apiKey.RequestsUsed += 5;
-                apiKey.ArcProMCP += model.ToLower() == "arcpromcp" ? 1 : 0;
-                apiKey.QGISMCP += model.ToLower() == "qgismcp" ? 1 : 0;
+                apiKey.ArcProMCP += model.ToLower() == "arcpromcp" ? 5 : 0;
+                apiKey.QGISMCP += model.ToLower() == "qgismcp" ? 5 : 0;
             }
 
 
