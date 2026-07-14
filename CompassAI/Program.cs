@@ -96,7 +96,7 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var context = services.GetRequiredService<ApplicationDbContext>();
-        // ÇáÊÃßÏ ãä ÊØÈíŞ Ãí Migration ãÚáŞ ÚäÏ ÊÔÛíá ÇáÜ Container
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Migration ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Container
         if (context.Database.GetPendingMigrations().Any())
         {
             context.Database.Migrate();
