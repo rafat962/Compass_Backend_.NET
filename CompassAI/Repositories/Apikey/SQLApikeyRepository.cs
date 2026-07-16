@@ -100,5 +100,11 @@ namespace CompassAI.Repositories.Apikey
             await _dbContext.SaveChangesAsync();
             return true;
         }
+
+        // Return all api keys (for reporting/aggregation)
+        public async Task<IEnumerable<ApiKey>> GetAllAsync()
+        {
+            return await _dbContext.ApiKeys.AsNoTracking().ToListAsync();
+        }
     }
 }

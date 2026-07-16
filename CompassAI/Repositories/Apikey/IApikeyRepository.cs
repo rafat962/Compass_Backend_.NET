@@ -27,5 +27,8 @@ namespace CompassAI.Repositories.APIKEY
 
         // Increment the usage counter after a successful API request
         Task<bool> RecordUsageAsync(string key,string model);
+
+        // Retrieve all api keys (used for reporting/aggregation)
+        Task<IEnumerable<ApiKey>> GetAllAsync();
     }
 }
