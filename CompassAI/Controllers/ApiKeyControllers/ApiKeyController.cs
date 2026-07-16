@@ -100,6 +100,8 @@ namespace CompassAI.Controllers.ApiKeyControllers
                 MapTalkLimit = apiKey.MapTalkLimit,
                 SpecReviewerLimit = apiKey.SpecReviewerLimit,
                 DocQueryLimit = apiKey.DocQueryLimit,
+                ArcProMCP = apiKey.ArcProMCP,
+                QGISMCP = apiKey.QGISMCP,
                 package = apiKey.PackageType,
                 expiry = apiKey.ExpiresAt
             });
@@ -167,10 +169,19 @@ namespace CompassAI.Controllers.ApiKeyControllers
             }
 
             // 5. Deduct quota (Increment consumption by 1)
+            if (model.ToLower() == "maptalk" || model.ToLower() == "specreviewer" || model.ToLower() == "docquery")
+            { 
             apiKey.RequestsUsed += 1;
             apiKey.MapTalkLimit += model.ToLower() == "maptalk" ? 1 : 0;
             apiKey.SpecReviewerLimit += model.ToLower() == "specreviewer" ? 1 : 0;
             apiKey.DocQueryLimit += model.ToLower() == "docquery" ? 1 : 0;
+            } 
+            else 
+            {
+                apiKey.RequestsUsed += 5;
+                apiKey.ArcProMCP += model.ToLower() == "arcpromcp" ? 5 : 0;
+                apiKey.QGISMCP += model.ToLower() == "qgismcp" ? 5 : 0;
+            }
 
 
 

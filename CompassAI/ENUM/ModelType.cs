@@ -4,6 +4,8 @@
     {
         MapTalk,
         SpecReviewer,
-        DocuQuery
+        DocuQuery,
+        ArcProMCP,
+        QGISMCP,
     }
 }

@@ -42,7 +42,7 @@ namespace CompassAI.Services.Payment
                             Currency = "usd",
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {
-                                Name = $"CompassAI - {packageType.ToUpper()} Subscription",
+                                Name = $"GeoGenAI-Hub - {packageType.ToUpper()} Subscription",
                                 Description = $"Monthly quota for {packageType} package"
                             },
                         },

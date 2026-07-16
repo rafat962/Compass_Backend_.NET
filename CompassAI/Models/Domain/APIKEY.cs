@@ -18,6 +18,8 @@ namespace CompassAI.Models.Domain
         public int MapTalkLimit { get; set; } = 0; // Total questions allowed (e.g., 1000)
         public int SpecReviewerLimit { get; set; } = 0; // Total questions allowed (e.g., 1000)
         public int DocQueryLimit { get; set; } = 0; // Total questions allowed (e.g., 1000)
+        public int ArcProMCP { get; set; } = 0; // Total questions allowed (e.g., 1000)
+        public int QGISMCP { get; set; } = 0; // Total questions allowed (e.g., 1000)
         public int RequestsUsed { get; set; }  // Counter: increments with each request
 
         public bool IsActive { get; set; } = true;
