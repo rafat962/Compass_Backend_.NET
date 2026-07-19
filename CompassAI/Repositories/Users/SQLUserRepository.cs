@@ -24,7 +24,7 @@ namespace CompassAI.Repositories.Users
             var user = await _context.Users.FindAsync(id);
             if (user != null)
             {
-                user.Active = true;
+                user.Active = isActive;
                 user.EmailActive = true;
                 if (emailActive) user.EmailActive = true;
 
