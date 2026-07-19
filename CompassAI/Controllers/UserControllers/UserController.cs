@@ -29,6 +29,52 @@ namespace CompassAI.Controllers.UserControllers
             _apiKeyRepository = apiKeyRepository;
             this.PermissionRepo = PermissionRepo;
         }
+
+        private async Task<(object UserData, object[] Permissions)> BuildUserDataAsync(CompassAI.Models.Domain.User user)
+        {
+            var userKeys = await _apiKeyRepository.GetByUserIdAsync(user.Id);
+            var activeKey = userKeys.FirstOrDefault(key => key.IsActive);
+            var permissions = await PermissionRepo.GetUserPermissionsAsync(user.Id);
+
+            return (
+                new
+                {
+                    user.Id,
+                    user.Name,
+                    user.Email,
+                    user.Photo,
+                    user.CurrentPlan,
+                    user.Role,
+                    apiKey = activeKey?.Key
+                },
+                permissions.Select(permission => (object)new
+                { 
+                    Resource = permission.Resource,
+                    Route = permission.Route,
+                    RouteName = permission.RouteName,
+                    Actions = permission.Actions.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                }).ToArray()
+            );
+        }
+
+        [HttpGet("me")]
+        [Authorize]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userClaimId = User.FindFirst("sub")?.Value
+                           ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userClaimId) || !Guid.TryParse(userClaimId, out var userId))
+                return Unauthorized();
+
+            var user = await _userRepo.GetUserByIdAsync(userId);
+            if (user == null)
+                return NotFound(new { status = "fail", message = "User not found" });
+
+            var result = await BuildUserDataAsync(user);
+            return Ok(new { status = "success", userData = result.UserData, perms = result.Permissions });
+        }
+
         
         // 1. Get Pending Users
         [HttpGet("getPendingUsers")]
@@ -224,35 +270,16 @@ namespace CompassAI.Controllers.UserControllers
                 // 5. Save Changes
                 await _userRepo.UpdateUserAsync(user);
 
-                // --- NEW: Fetch API Key and Permissions to match Login response ---
-
-                // Fetch active API Key
-                var userKeys = await _apiKeyRepository.GetByUserIdAsync(user.Id);
-                var activeKey = userKeys.FirstOrDefault(k => k.IsActive);
-
-                // Fetch and Format Permissions
-                var perms = await PermissionRepo.GetUserPermissionsAsync(user.Id);
-                var formattedPerms = perms.Select(p => new
-                {
-                    Resource = p.Resource,
-                    Route = p.Route,
-                    RouteName = p.RouteName,
-                    Actions = p.Actions.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                });
+                var result = await BuildUserDataAsync(user);
 
                 return Ok(new
                 {
                     status = "success",
                     message = "Profile updated successfully",
-                    userData = new
-                    {
-                        name = user.Name,
-                        email = user.Email,
-                        photo = user.Photo,
-                        currentPlan = user.CurrentPlan,
-                        apiKey = activeKey?.Key // Added API Key
-                    },
-                    perms = formattedPerms // Added Permissions
+                    // Keep `user` for existing consumers and `userData` for Settings.
+                    user = result.UserData,
+                    userData = result.UserData,
+                    perms = result.Permissions
                 });
             }
             catch (Exception ex)

@@ -1,0 +1,18 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY CompassAI/CompassAI.csproj CompassAI/
+RUN dotnet restore CompassAI/CompassAI.csproj
+COPY . .
+RUN dotnet publish CompassAI/CompassAI.csproj -c Release -o /app/publish /p:UseAppHost=false
+# The source appsettings.json contains local development values. Never bake it
+# into a distributable image; Docker supplies runtime configuration via env vars.
+RUN rm /app/publish/appsettings.json \
+    && cp /src/CompassAI/appsettings.Docker.json /app/publish/appsettings.json
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/publish .
+# RazorLight loads these templates from the filesystem at runtime.
+COPY --from=build /src/CompassAI/Templates ./Templates
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "CompassAI.dll"]

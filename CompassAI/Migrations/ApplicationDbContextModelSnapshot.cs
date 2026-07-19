@@ -77,6 +77,24 @@ namespace CompassAI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("ApiKeys");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("6e26344e-971b-420c-8fe7-0fbc9d0fe520"),
+                            ArcProMCP = 50000,
+                            CreatedAt = new DateTime(2026, 7, 15, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DocQueryLimit = 50000,
+                            IsActive = true,
+                            Key = "cmp_eb4fbf10989d40e5a9b3c16d7e2f503a",
+                            MapTalkLimit = 50000,
+                            PackageType = "Premium",
+                            QGISMCP = 50000,
+                            RequestsLimit = 50000,
+                            RequestsUsed = 0,
+                            SpecReviewerLimit = 50000,
+                            UserId = new Guid("a0c8d8d2-9e4f-4f7c-89e6-06ea39d0d3df")
+                        });
                 });
 
             modelBuilder.Entity("CompassAI.Models.Domain.User", b =>
@@ -141,6 +159,24 @@ namespace CompassAI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a0c8d8d2-9e4f-4f7c-89e6-06ea39d0d3df"),
+                            Active = true,
+                            CreatedAt = new DateTime(2026, 7, 15, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CurrentPlan = "Free",
+                            Email = "rafatkamel96@gmail.com",
+                            EmailActive = true,
+                            LoginLogs = "[]",
+                            LogoutLogs = "[]",
+                            Name = "Rafat Kamel",
+                            PasswordHash = "$2b$12$/EwnxUm7UQu84.BxsTLhDuuaPbRzYD.ZRwy3J88bNZ0hMTObkLUN6",
+                            Photo = "none",
+                            Role = "admin",
+                            UpdatedAt = new DateTime(2026, 7, 15, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("CompassAI.Models.Domain.UserPermission", b =>

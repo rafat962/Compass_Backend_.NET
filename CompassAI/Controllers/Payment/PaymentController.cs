@@ -61,9 +61,14 @@ namespace CompassAI.Controllers.Payment
                 {
                     var session = stripeEvent.Data.Object as Stripe.Checkout.Session;
 
-                    var userId = session.Metadata["UserId"];
-                    var packageType = session.Metadata["PackageType"];
-                    var userGuid = Guid.Parse(userId);
+                    if (session?.Metadata == null ||
+                        !session.Metadata.TryGetValue("UserId", out var userId) ||
+                        !session.Metadata.TryGetValue("PackageType", out var packageType) ||
+                        !Guid.TryParse(userId, out var userGuid))
+                    {
+                        return BadRequest(new { message = "Checkout session metadata is invalid." });
+                    }
+
 
                     var userKeys = await _apiKeyRepository.GetByUserIdAsync(userGuid);
                     var activeKey = userKeys.FirstOrDefault(k => k.IsActive);
