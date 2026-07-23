@@ -4,6 +4,7 @@ using CompassAI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CompassAI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260715064338_SeedInitialAdmin")]
+    partial class SeedInitialAdmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,24 +80,6 @@ namespace CompassAI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("ApiKeys");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("6e26344e-971b-420c-8fe7-0fbc9d0fe520"),
-                            ArcProMCP = 50000,
-                            CreatedAt = new DateTime(2026, 7, 15, 0, 0, 0, 0, DateTimeKind.Utc),
-                            DocQueryLimit = 50000,
-                            IsActive = true,
-                            Key = "cmp_eb4fbf10989d40e5a9b3c16d7e2f503a",
-                            MapTalkLimit = 50000,
-                            PackageType = "Premium",
-                            QGISMCP = 50000,
-                            RequestsLimit = 50000,
-                            RequestsUsed = 0,
-                            SpecReviewerLimit = 50000,
-                            UserId = new Guid("a0c8d8d2-9e4f-4f7c-89e6-06ea39d0d3df")
-                        });
                 });
 
             modelBuilder.Entity("CompassAI.Models.Domain.User", b =>

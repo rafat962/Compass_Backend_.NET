@@ -11,7 +11,7 @@ namespace CompassAI.Repositories.Users
         public SQLUserRepository(ApplicationDbContext context) => _context = context;
 
         public async Task<IEnumerable<User>> GetPendingUsersAsync() =>
-            await _context.Users.Where(u => u.EmailActive && !u.Active).ToListAsync();
+            await _context.Users.Where(u => !u.EmailActive && !u.Active).ToListAsync();
 
         public async Task<IEnumerable<User>> GetAllUsersAsync() =>
             await _context.Users.ToListAsync();
@@ -25,7 +25,9 @@ namespace CompassAI.Repositories.Users
             if (user != null)
             {
                 user.Active = isActive;
+                user.EmailActive = true;
                 if (emailActive) user.EmailActive = true;
+
                 await _context.SaveChangesAsync();
             }
         }
@@ -58,7 +60,7 @@ namespace CompassAI.Repositories.Users
         }
 
         public async Task<bool> IsEmailTakenAsync(string email, Guid excludeUserId) =>
-            await _context.Users.AnyAsync(u => u.Email == email && u.Id != excludeUserId);
+            await _context.Users.AnyAsync(u => u.Email == email.ToLower().Trim() && u.Id != excludeUserId);
 
         public Task<bool> UpdateUserPackage(ApiKey ApiKey)
         {
@@ -71,6 +73,12 @@ namespace CompassAI.Repositories.Users
             user.CurrentPlan = ApiKey.PackageType;
 
             return Task.FromResult(true);
+        }
+
+        public async Task AddUserAsync(User user)
+        {
+             _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
         }
     }
 }

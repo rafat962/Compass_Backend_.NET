@@ -7,6 +7,10 @@ namespace CompassAI.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        private static readonly Guid InitialAdminId = Guid.Parse("a0c8d8d2-9e4f-4f7c-89e6-06ea39d0d3df");
+        private static readonly Guid InitialAdminApiKeyId = Guid.Parse("6e26344e-971b-420c-8fe7-0fbc9d0fe520");
+        private static readonly DateTime InitialAdminCreatedAt = new(2026, 7, 15, 0, 0, 0, DateTimeKind.Utc);
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
@@ -52,6 +56,44 @@ namespace CompassAI.Data
             modelBuilder.Entity<ApiKey>()
                 .HasIndex(a => a.Key)
                 .IsUnique(); // Ensure no duplicate keys in DB
+
+            // The password is the BCrypt hash of the requested initial password.
+            // Keep these values constant: EF Core writes this user through a migration.
+            modelBuilder.Entity<User>().HasData(new User
+            {
+                Id = InitialAdminId,
+                Name = "Rafat Kamel",
+                Email = "rafatkamel96@gmail.com",
+                PasswordHash = "$2b$12$/EwnxUm7UQu84.BxsTLhDuuaPbRzYD.ZRwy3J88bNZ0hMTObkLUN6",
+                Role = "admin",
+                Active = true,
+                EmailActive = true,
+                Photo = "none",   
+                LoginLogs = new List<DateTime>(),
+                LogoutLogs = new List<DateTime>(),
+                CurrentPlan = "Free",
+                CreatedAt = InitialAdminCreatedAt,
+                UpdatedAt = InitialAdminCreatedAt
+            });
+
+            // This key is seeded with the admin user through EF Core migrations.
+            modelBuilder.Entity<ApiKey>().HasData(new ApiKey
+            {
+                Id = InitialAdminApiKeyId,
+                Key = "cmp_eb4fbf10989d40e5a9b3c16d7e2f503a",
+                UserId = InitialAdminId,
+                PackageType = "Premium",
+                RequestsLimit = 50000,
+                RequestsUsed = 0,
+                MapTalkLimit = 50000,
+                SpecReviewerLimit = 50000,
+                DocQueryLimit = 50000,
+                ArcProMCP = 50000,
+                QGISMCP = 50000,
+                IsActive = true,
+                CreatedAt = InitialAdminCreatedAt,
+                ExpiresAt = null
+            });
         }
     }
 }
