@@ -341,6 +341,7 @@ namespace CompassAI.Controllers.AuthControllers
                         name = user.Name,
                         email = user.Email,
                         role = user.Role,
+                        currentPlan = user.CurrentPlan,
                         photo = user.Photo
                     }
                 });

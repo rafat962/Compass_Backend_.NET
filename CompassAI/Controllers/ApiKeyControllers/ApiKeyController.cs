@@ -92,10 +92,15 @@ namespace CompassAI.Controllers.ApiKeyControllers
             var apiKey = await _apiKeyRepository.GetByKeyStringAsync(key);
             if (apiKey == null) return NotFound("Invalid Key");
 
+            // Join the user so the client can render a profile (name/email/photo)
+            // without a second round trip or a JWT.
+            var user = await _authRepository.GetUserByIdAsync(apiKey.UserId);
+
             return Ok(new
             {
                 isValid = apiKey.IsValid,
                 remainingRequests = apiKey.RequestsLimit - apiKey.RequestsUsed,
+                requestsUsed = apiKey.RequestsUsed,
                 RequestsLimit = apiKey.RequestsLimit,
                 MapTalkLimit = apiKey.MapTalkLimit,
                 SpecReviewerLimit = apiKey.SpecReviewerLimit,
@@ -103,9 +108,17 @@ namespace CompassAI.Controllers.ApiKeyControllers
                 ArcProMCP = apiKey.ArcProMCP,
                 QGISMCP = apiKey.QGISMCP,
                 package = apiKey.PackageType,
-                expiry = apiKey.ExpiresAt
+                expiry = apiKey.ExpiresAt,
+                user = user == null ? null : new
+                {
+                    name = user.Name,
+                    email = user.Email,
+                    photo = user.Photo,
+                    role = user.Role
+                }
             });
         }
+        
 
         // Reset usage and update limits for package renewal
         [HttpPut("renew/{key}")]
@@ -119,6 +132,8 @@ namespace CompassAI.Controllers.ApiKeyControllers
             apiKey.MapTalkLimit = 0;
             apiKey.SpecReviewerLimit = 0;
             apiKey.DocQueryLimit = 0;
+            apiKey.ArcProMCP = 0;
+            apiKey.QGISMCP = 0;
 
 
             int calculatedLimit = dto.NewPackageType.ToLower() switch
